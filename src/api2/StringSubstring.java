@@ -1,6 +1,6 @@
 package api2;
 
-public class StringSunstring {
+public class StringSubstring {
 	public static void main(String[] args) {
 		String ssn = "880815-1234567";
 		
