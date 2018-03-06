@@ -22,19 +22,59 @@ public class WildCardExample {
 		personCourse.add(new Student("학생"));
 		personCourse.add(new HighStudent("고등학생"));
 		
-		Course<Worker> workerCourese = new Course<Worker>("직장인과정", 5);
-		workerCourese.add(new Worker("직장인"));
+		Course<Worker> workerCourse = new Course<Worker>("직장인과정", 5);
+		workerCourse.add(new Worker("직장인"));
+		
 		Course<Student> studentCourse = new Course<Student>("학생과정", 5);
 		studentCourse.add(new Student("학생"));
 		studentCourse.add(new HighStudent("고등학생"));
 		
-		registerCourse(psersonCourse);
+		Course<HighStudent> highStudentCourse = new Course<HighStudent>("고등학생과정", 5);
+		highStudentCourse.add("고등학생");
+		
+		registerCourse(personCourse);
 		registerCourse(workerCourse);
 		registerCourse(studentCourse);
 		registerCourse(highStudentCourse);
 		System.out.println();
 		
+		//registerCourseStudent(personCourse);
+		//registerCourseStudent(workerCourse);
+		registerCourseStudent(studentCourse);
+		registerCourseStudent(highStudentCourse);
+		System.out.println();
 		
+		registerCourseWorker(personCourse);
+		registerCourseWorker(workerCourse);
+		//registerCourseWorker(studentCourse);
+		//registerCourseWorker(highStudentCourse);
+		
+		
+		
+	}
+}
+
+
+class Person<T> {
+	public Person(T t) {
+		
+	}
+}
+
+class Worker<T> extends Person{
+	public Worker(T t) {
+	
+	}
+}
+
+class Student<T> extends Person{
+	public Student(T t) {
+		
+	}
+}
+
+class HighStudent<T t> extends Student {
+	public HighStudent(T t) {
 		
 	}
 }
