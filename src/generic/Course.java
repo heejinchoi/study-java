@@ -16,7 +16,7 @@ public class Course <T> {
 		return students;
 	}
 	
-	public void add(T t) {
+	public void add(T t) {	//배열에 비어있는 부분을 찾아서 수강생을 추가하는 메소드
 		for(int i=0; i<students.length; i++) {
 			if(students[i] == null) {
 				students[i] = t;

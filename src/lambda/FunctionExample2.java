@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.ToIntFunction;
 
-import api.Student;
-
 public class FunctionExample2 {
 	private static List<Student> list = Arrays.asList(
 			new Student("홍길동", 90, 96),
@@ -27,15 +25,13 @@ public class FunctionExample2 {
 			}
 			double avg = (double) sum / list.size();
 			return avg;
-			System.out.println();
 		}
-		
 		
 		public static void main(String[] args) {
 			double englishAvg = avg(s -> s.getEnglishScore());
 			System.out.println("영어 평균 점수: " + englishAvg);
 
-			double mathAvg = avg(s -> s.getMathScrore());
+			double mathAvg = avg(s -> s.getMathScore());
 			System.out.println("수학 평균 점수: " + mathAvg);
 			
 		

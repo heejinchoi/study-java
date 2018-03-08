@@ -14,7 +14,7 @@ public class Student {
 	public String getName() {
 		return name;
 	}
-	public int getEnglisScore() {
+	public int getEnglishScore() {
 		return englishScore;
 	}
 	public int getMathScore() {

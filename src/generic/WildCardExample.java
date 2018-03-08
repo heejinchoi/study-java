@@ -30,7 +30,7 @@ public class WildCardExample {
 		studentCourse.add(new HighStudent("고등학생"));
 		
 		Course<HighStudent> highStudentCourse = new Course<HighStudent>("고등학생과정", 5);
-		highStudentCourse.add("고등학생");
+		highStudentCourse.add(new HighStudent("고등학생"));
 		
 		registerCourse(personCourse);
 		registerCourse(workerCourse);
@@ -55,26 +55,35 @@ public class WildCardExample {
 }
 
 
-class Person<T> {
-	public Person(T t) {
-		
-	}
-}
-
-class Worker<T> extends Person{
-	public Worker(T t) {
+class Person {
+	String name;
 	
+	public Person(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public String toString() {
+		return name;
 	}
 }
 
-class Student<T> extends Person{
-	public Student(T t) {
-		
+class Student extends Person{
+	public Student(String name) {
+		super(name);
 	}
 }
 
-class HighStudent<T t> extends Student {
-	public HighStudent(T t) {
-		
+class Worker extends Person{
+	public Worker(String name) {
+		super(name);
+	}
+}
+
+class HighStudent extends Student {
+	public HighStudent(String name) {
+		super(name);
 	}
 }

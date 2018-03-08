@@ -1,6 +1,7 @@
 package lambda;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.function.Predicate;
 
 public class PredicateExample {
@@ -11,7 +12,7 @@ public class PredicateExample {
 		new Student2("박한나", "여자", 92)
 	);
 	
-	public static double avg(Predicate<Student> predicate) {
+	public static double avg(Predicate<Student2> predicate) {
 		int count = 0, sum = 0;
 		for(Student2 student : list) {
 			if(predicate.test(student)) {

@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.ToIntFunction;
 
-import api.Student;
-
 public class FunctionExample1 {
 	private static List<Student> list = Arrays.asList(
 			new Student("홍길동", 90, 96),
